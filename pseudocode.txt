@@ -1,0 +1,38 @@
+This python file is to manage dataset file. First is how to load the data firm the file, second is to organize the data in a proper way. And to calculate different summary statisics with the data visualization.
+
+1.Load the data to the current directory.
+
+2.1 Give data file a name
+    Import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("my_file",
+                       type=str, help="Path to the input csv file.")
+    args = parser.parse_args()
+
+    my_file = args.my_file
+
+    import os
+    import os.path as op
+
+2.2 load the file to the python
+    import panadas as pd
+
+    data = pd.read_csv(my_csv_file, sep='\s+|,', header=None)
+    print(data.head())
+    print(data.shape)
+
+3 To organize the data we can use print(data.iloc[?, ?]) ?= columns or rows need
+  to display.
+
+4 To compute summary statistics
+  first we need to import numpy "import nummpy as np"
+  to compute mean "print(np.mean(data))"
+  to compute standard deviation "print(np.std(data))"
+  to computr average "print(np.average(data))"
+
+
+5 Visualize data
+  we need to import matplotlib.pyplot
+  for one feature:show histogram of one attribute and save it to the file.
+  for two features: compare two different attributes and show them in
+                    one figure and save it to the file.
