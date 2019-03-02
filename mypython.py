@@ -40,6 +40,6 @@ plt.show()
 #2 fetures(column)
 plt.figure(figsize=(8,8))
 plt.scatter(data.iloc[:, -1], data.iloc[:, 6])
-plt.savefig("AGE vs MEDV.png")
+plt.savefig("AGEvsMEDV.png")
 
 plt.show()
